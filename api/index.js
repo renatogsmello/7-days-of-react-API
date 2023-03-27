@@ -10,13 +10,13 @@ sgMail.setApiKey(apiKey)
 
 let products
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
 	res.setHeader("Content-Type", "text/html")
 	res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate")
 	res.end("welcome to Plants API an Sendgrid")
 })
 
-app.get("/send-email", (req, res) => {
+app.get("/api/send-email", (req, res) => {
 	const { sender, name } = req.query
 
 	const msg = {
@@ -43,7 +43,7 @@ fs.readFile(path.join(__dirname, "./plants.json"), "utf-8", (err, data) => {
 	}
 })
 
-app.get("/plants", (req, res) => {
+app.get("/api/plants", (req, res) => {
 	return res.json(products)
 })
 
