@@ -42,3 +42,5 @@ fs.readFile(path.join(__dirname, "./plants.json"), "utf-8", (err, data) => {
 app.get("/plants", (req, res) => {
 	return res.json(products)
 })
+
+module.exports = app
