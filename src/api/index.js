@@ -6,7 +6,7 @@ const app = express()
 
 const apiKey = process.env.SENDGRID_API_KEY
 const sgMail = require("@sendgrid/mail")
-console.log(apiKey)
+
 sgMail.setApiKey(apiKey)
 
 let products
