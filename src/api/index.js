@@ -10,10 +10,12 @@ sgMail.setApiKey(apiKey)
 
 let products
 
+app.get("/", (req, res) => {
+	res.end("welcome to Plants API an Sendgrid")
+})
+
 app.get("/send-email", (req, res) => {
-	console.log("req query", req.query)
 	const { sender, name } = req.query
-	console.log("email e name", sender, name)
 
 	const msg = {
 		to: sender,
