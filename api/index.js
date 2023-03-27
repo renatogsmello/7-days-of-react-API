@@ -10,11 +10,11 @@ sgMail.setApiKey(apiKey)
 
 let products
 
-app.get("/api", (req, res) => {
-	res.setHeader("Content-Type", "text/html")
-	res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate")
-	res.end("welcome to Plants API an Sendgrid")
-})
+// app.get("/api", (req, res) => {
+// 	res.setHeader("Content-Type", "text/html")
+// 	res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate")
+// 	res.end("welcome to Plants API an Sendgrid")
+// })
 
 app.get("/send-email", (req, res) => {
 	const { sender, name } = req.query
