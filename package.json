@@ -1,13 +1,13 @@
 {
 	"name": "7-days-of-react-api",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "./src/api/index.js",
 	"devDependencies": {},
 	"author": "",
 	"license": "ISC",
 	"description": "",
 	"scripts": {
-    "start": "node .",
+		"start": "node .",
 		"api": "nodemon ./src/api/index.js"
 	},
 	"dependencies": {
