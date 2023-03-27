@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 	res.end("welcome to Plants API an Sendgrid")
 })
 
-app.get("/api/send-email", (req, res) => {
+app.get("/send-email", (req, res) => {
 	const { sender, name } = req.query
 
 	const msg = {
@@ -43,7 +43,7 @@ fs.readFile(path.join(__dirname, "./plants.json"), "utf-8", (err, data) => {
 	}
 })
 
-app.get("/api/plants", (req, res) => {
+app.get("/plants", (req, res) => {
 	return res.json(products)
 })
 
