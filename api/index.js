@@ -13,6 +13,7 @@ let products
 app.get("/api", (req, res) => {
 	res.setHeader("Content-Type", "text/html")
 	res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate")
+	res.setHeader("Access-Control-Allow-Origin", "*")
 	res.end("welcome to Plants API an Sendgrid")
 })
 
@@ -44,6 +45,7 @@ fs.readFile(path.join(__dirname, "./plants.json"), "utf-8", (err, data) => {
 })
 
 app.get("/api/plants", (req, res) => {
+	res.setHeader("Access-Control-Allow-Origin", "*")
 	return res.json(products)
 })
 
