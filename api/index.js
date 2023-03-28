@@ -18,6 +18,7 @@ app.get("/api", (req, res) => {
 })
 
 app.get("/api/send-email", (req, res) => {
+	res.setHeader("Access-Control-Allow-Origin", "*")
 	const { sender, name } = req.query
 
 	const msg = {
